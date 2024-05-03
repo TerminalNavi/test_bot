@@ -2,7 +2,7 @@
 from aiogram import F, Router
 from aiogram.filters import Command
 from aiogram.types import Message, BotCommand, CallbackQuery
-from keyboards.start import *
+from keyboards.start import kb_back_btn, kb_next_btn
 
 
 router = Router()

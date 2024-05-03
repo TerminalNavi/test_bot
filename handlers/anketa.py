@@ -4,7 +4,7 @@ from aiogram.filters import Command
 from aiogram.types import Message, CallbackQuery
 from aiogram.fsm.context import FSMContext
 from states.anketa import Anketa
-from keyboards.anketa import *
+from keyboards.anketa import kb_anketa_by_gender, kb_anketa_cancel, kb_anketa_cancel_and_back
 
 router = Router()
 
@@ -65,6 +65,6 @@ async def set_gender_anketa_handler(callback_query: CallbackQuery, state:FSMCont
     await state.clear()
 
 @router.message(Anketa.gender)
-async def set_gender_by_anketa_handler(message: Message, state:FSMContext):
+async def set_gender_by_anketa_handler(message: Message):
     '''Нажимать нужно кнопочки, а не свой гендер придумывать'''
     await message.answer('Нужно пол выбрать кнопкой')
