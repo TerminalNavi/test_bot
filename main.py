@@ -1,6 +1,7 @@
 '''Несколько жизненно необходимых модулей'''
 import asyncio
 import logging
+# from datetime import datetime
 from aiogram import Bot, Dispatcher
 from handlers import include_routers
 
@@ -10,6 +11,9 @@ bot_token = open('config.txt', encoding='UTF-8').readline()
 bot = Bot(bot_token)
 
 dp = Dispatcher()
+
+
+
 
 async def main():
     '''Функция для запуска бота'''
